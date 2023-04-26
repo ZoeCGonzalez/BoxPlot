@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+	<div id="BoxPlot"></div>
+
+	<script>
+		// Datos de ejemplo
+		var data = [
+		  {
+		    y: [1, 4, 2, 3, 0, 0, 0, 0, 1, 0, 0, 4, 0, 1, 5, 0, 0, 2, 1, 0, 0, 5, 4, 3, 4, 4, 3, 0, 1, 0, 0],
+		    type: 'box',
+		    name: 'Madres',
+		    boxpoints: 'all'
+		  },
+		  {
+		    y: [1, 2, 3, 3, 3, 4, 5, 5, 6, 8],
+		    type: 'box',
+		    name: 'Variable 2',
+		    boxpoints: 'all'
+		  },
+		  {
+		    y: [0, 0, 0, 1, 1, 1, 1, 1, 2, 3],
+		    type: 'box',
+		    name: 'Variable 3',
+		    boxpoints: 'all'
+		  }
+		];
+
+		// Diseño del gráfico
+		var layout = {
+		  yaxis: {
+		    title: 'Libros leidos',
+		    zeroline: false
+		  },
+		  boxmode: 'group'
+		};
+
+		// Crear el gráfico
+		Plotly.newPlot('BoxPlot', data, layout);
+	</script>
+</body>
+</html>
